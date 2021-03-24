@@ -3,3 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+.text-grey {
+    color: grey;
+}
+.text-white {
+    color: white;
+}
+.no-style {
+    list-style: none;
+}
+.small-icon {
+    width: 40px;
+}
+main {
+    height: calc(100vh - 100px);
+}
+#left-bar {
+    width: 250px;
+    height: 100%;
+    background-color: black;
+}
+/* .container-flex {
+    display: flex;
+} */
+#left-bar > * {
+    padding: 10px;
+}
+#left-bar > img {
+    width: 80%;
+}
+#left-bar ul li > * {
+    vertical-align: middle;
+}
+
+
+nav {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(28, 48, 48);
+}
