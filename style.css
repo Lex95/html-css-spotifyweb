@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* forse posso mettere h bianchi e p grigi direttamente */
 .text-grey {
     color: grey;
 }
@@ -79,6 +80,7 @@ main {
     flex-direction: row-reverse;
     align-items: center;
 }
+/* forse posso togliere container-flex dal selettore */
 .button {
     color: white;
     padding: 10px 30px;
@@ -91,8 +93,7 @@ main {
 }
 .main-section {
     background-color: rgb(10, 20, 20);
-    /* provv */
-    height: 300px;
+    padding: 10px;
 }
 .main-section.container-flex {
     flex-direction: column;
@@ -109,9 +110,20 @@ main {
     text-transform: uppercase;
     text-decoration: none;
 }
+section > .container-flex {
+    flex-wrap: wrap;
+}
+.item {
+    display: inline-block;
+    max-width: 200px;
+    /* prob usare flex grow e shrink per gestire responsiveness */
+}
+.item img {
+    width: 100%;
+}
 
 
-
+/* nav con fixed nasconde l'ultima parte del body */
 nav {
     height: 100px;
     width: 100%;
