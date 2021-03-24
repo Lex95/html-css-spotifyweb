@@ -13,7 +13,11 @@
     list-style: none;
 }
 .small-icon {
-    width: 40px;
+    width: 30px;
+    opacity: 0.5;
+}
+.align > * {
+    vertical-align: middle;
 }
 main {
     height: calc(100vh - 100px);
@@ -32,10 +36,17 @@ main {
 #left-bar > img {
     width: 80%;
 }
-#left-bar ul li > * {
-    vertical-align: middle;
+#add-playlist {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: 1000;
 }
-
 
 nav {
     height: 100px;
