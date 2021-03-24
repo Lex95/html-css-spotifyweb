@@ -13,8 +13,16 @@
     list-style: none;
 }
 .small-icon {
-    width: 30px;
+    height: 30px;
+}
+.xs-icon {
+    width: 15px;
+}
+.grey-icon {
     opacity: 0.5;
+}
+.border-b {
+    border-bottom: 1px solid grey;
 }
 .align > * {
     vertical-align: middle;
@@ -26,10 +34,12 @@ main {
     width: 250px;
     height: 100%;
     background-color: black;
+    float: left;
+    position: relative;
 }
-/* .container-flex {
+.container-flex {
     display: flex;
-} */
+}
 #left-bar > * {
     padding: 10px;
 }
@@ -47,11 +57,65 @@ main {
     font-size: 30px;
     font-weight: 1000;
 }
+.fixed-b {
+    position: absolute;
+    bottom: 0;
+}
+/* forse va rifatto col flex, vediamo poi */
+#propic {
+    background-color: grey;
+    border-radius: 50%;
+}
+#right-content {
+    width: calc(100% - 250px);
+    height: 100%;
+    float: left;
+}
+.top-bar {
+    height: 100px;
+    background-color: rgb(10, 10, 10);
+}
+.top-bar.container-flex {
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.button {
+    color: white;
+    padding: 10px 30px;
+    border: 2.5px solid white;
+    border-radius: 20px;
+    height: 40px;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.main-section {
+    background-color: rgb(10, 20, 20);
+    /* provv */
+    height: 300px;
+}
+.main-section.container-flex {
+    flex-direction: column;
+}
+.browse {
+    align-self: center;
+}
+.browse li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.browse a {
+    color: grey;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
 
 nav {
     height: 100px;
     width: 100%;
     position: fixed;
     bottom: 0;
-    background-color: rgb(28, 48, 48);
+    background-color: rgb(40, 40, 40);
 }
