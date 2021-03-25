@@ -8,6 +8,12 @@ a {
     color: inherit;
     opacity: 0.5;
 }
+.low-opacity {
+    opacity: 0.8;
+}
+.no-opacity {
+    opacity: 1;
+}
 /* hover solo su opacity!!! */
 h1, h2, h3, h4, h5, h6 {
     color: white;
@@ -190,16 +196,34 @@ nav {
 #now-playing > * {
     margin-left: 10px;
 }
+#now-playing > div {
+    margin-right: 30px;
+}
 .img-playing {
     height: 50px;
 }
+#now-playing .low-opacity{
+    font-size: 14px;
+    display: block;
+}
 #player {
     width: 50%;
+}
+#player i {
+    margin: 0 10px;
+}
+#player .fa-play-circle-o {
+    font-size: 40px;
+    margin: 0 20px;
+}
+.bar {
+    height: 4px;
 }
 .length-bar {
     height: 4px;
     background-color: grey;
     border-radius: 2px;
+    cursor: pointer;
 }
 .progress-bar {
     height: 100%;
@@ -208,15 +232,23 @@ nav {
 }
 #player .length-bar {
     width: 80%;
+}
+#player .bar {
     margin: 0 20px;
 }
 #player .progress-bar {
     width: 20%;
 }
+
+
+#options > * {
+    margin: 0 5px;
+}
 #options .length-bar {
     width: 100px;
 }
-/* lavorare un po' con i margini */
 #options .progress-bar {
     width: 30%;
 }
+
+/* media query */
