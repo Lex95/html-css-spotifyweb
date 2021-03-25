@@ -150,16 +150,27 @@ nav {
 #player {
     width: 50%;
 }
-#length-bar {
+.length-bar {
     height: 4px;
-    width: 80%;
     background-color: grey;
     border-radius: 2px;
-    margin: 0 20px;
 }
-#progress-bar {
+.progress-bar {
     height: 100%;
-    width: 20%;
     border-radius: 2px;
     background-color: white;
+}
+#player .length-bar {
+    width: 80%;
+    margin: 0 20px;
+}
+#player .progress-bar {
+    width: 20%;
+}
+#options .length-bar {
+    width: 100px;
+}
+/* lavorare un po' con i margini */
+#options .progress-bar {
+    width: 30%;
 }
