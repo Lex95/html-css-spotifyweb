@@ -72,6 +72,7 @@ p {
     opacity: 0.8;
 }
 
+/* specifici */
 main {
     height: calc(100vh - 100px);
 }
@@ -81,6 +82,7 @@ main {
     background-color: black;
     float: left;
     flex-direction: column;
+    overflow-y: auto;
 }
 #left-bar > * {
     padding: 5px 15px;
@@ -108,7 +110,7 @@ main {
 }
 .stretch-item {
     flex-grow: 1;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 #left-bar ul li {
     margin-top: 10px;
@@ -168,20 +170,24 @@ section > .container-flex {
     flex-wrap: wrap;
     margin-top: 20px;
 }
+section:first-of-type  > .container-flex {
+    justify-content: space-between;
+}
 section > h2 {
     margin-top: 20px;
 }
 section > p {
     margin-top: 10px;
 }
+/* forse non è ancora corretto, il margine penso vada calcolato */
 .item {
-    margin-right: 10px;
+    padding-right: 20px;
     display: inline-block;
+    width: calc(100% / 6);
     max-width: 200px;
     text-align: center;
     margin-bottom: 20px;
     opacity: 1;
-    /* prob usare flex grow e shrink per gestire responsiveness */
 }
 .item img {
     width: 100%;
