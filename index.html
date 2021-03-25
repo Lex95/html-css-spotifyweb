@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Spotify Web</title>
 </head>
 <body>
     <main>
+        <!-- da fare tutti come link -->
         <div id="left-bar" class="text-grey">
             <img src="img/logo.svg" alt="">
             <ul class="no-style">
@@ -66,6 +67,7 @@
                     <li><a href="#">Nuove uscite</a></li>
                     <li><a href="#">Scopri</a></li>
                 </ul>
+                <!-- da fare tutti gli item come link -->
                 <!-- Recently played -->
                 <section>
                     <h2 class="text-white">Recently Played</h2>
@@ -135,8 +137,22 @@
             </div>
         </div>
     </main>
-    <nav>
+    <nav class="container-flex">
+        <!-- parte a sinistra -->
+        <div id="now-playing" class="align">
+            <img class="img-playing" src="img/sinister.jpeg" alt="">
+            <div class="inline">
+                <h6>Sinister</h6>
+                <p class="text-grey text-small">Brano Nome</p>
+            </div>
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <i class="fa fa-folder-o" aria-hidden="true"></i>
+        </div>
+        <!-- parte centrale -->
+        <div id="play-bar">
+            
 
+        </div>
     </nav>
 </body>
 </html>
