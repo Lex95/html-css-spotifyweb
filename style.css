@@ -13,6 +13,9 @@
 .text-small {
     font-size: 10px;
 }
+.text-center {
+    text-align: center;
+}
 .no-style {
     list-style: none;
 }
@@ -143,4 +146,20 @@ nav {
 }
 .img-playing {
     height: 50px;
+}
+#player {
+    width: 50%;
+}
+#length-bar {
+    height: 4px;
+    width: 80%;
+    background-color: grey;
+    border-radius: 2px;
+    margin: 0 20px;
+}
+#progress-bar {
+    height: 100%;
+    width: 20%;
+    border-radius: 2px;
+    background-color: white;
 }
