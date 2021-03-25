@@ -67,7 +67,10 @@ p {
 .inline {
     display: inline-block;
 }
-
+.clickable {
+    cursor: pointer;
+    opacity: 0.8;
+}
 
 main {
     height: calc(100vh - 100px);
