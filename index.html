@@ -11,47 +11,33 @@
 </head>
 <body>
     <main>
-        <!-- da fare tutti come link -->
-        <div id="left-bar" class="text-grey">
+        <!-- barra a sinistra -->
+        <div id="left-bar" class="container-flex text-grey">
             <img src="img/logo.svg" alt="">
-            <ul class="no-style">
-                <li class="align">
-                    <img class="small-icon grey-icon" src="img/home.svg" alt=""> Home
-                    <!-- righina verde -->
-                </li>
-                <li class="align">
-                    <img class="small-icon grey-icon" src="img/search.svg" alt=""> Cerca
-                </li>
-                <li class="align">
-                    <img class="small-icon grey-icon" src="img/libreria.svg" alt=""> La tua libreria
-                </li>
+            <a class="align green-left" href="#"><img class="small-icon grey-icon" src="img/home.svg" alt=""> Home</a>
+            <a class="align" href="#"><img class="small-icon grey-icon" src="img/search.svg" alt=""> Cerca</a>
+            <a class="align" href="#"><img class="small-icon grey-icon" src="img/libreria.svg" alt=""> La tua libreria</a>
+            <!-- margine -->
+            <h5>PLAYLIST</h5>
+            <a class="align" href="#"><div id="add-playlist">+</div> Crea Playlist</a>
+            <ul class="no-style stretch-item">
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
+                <li><a href="#">Nome Playlist</a></li>
             </ul>
-            <h5 class="text-white">PLAYLIST</h5>
-            <div class="align">
-                <div id="add-playlist">+</div> Crea Playlist
-            </div>
-            <ul class="no-style">
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-                <li>Nome Playlist</li>
-            </ul>
-            <div class="fixed-b">
-                <div class="align border-b">
-                    <img class="xs-icon grey-icon" src="img/download.svg" alt=""> Installa app
-               </div>
-               <div class="align">
+            <div id="footer-bar">
+                <a class="align border-b block" href="#"><img class="xs-icon grey-icon" src="img/download.svg" alt=""> Installa app</a>
+                <div class="align">
                    <img id="propic" class="small-icon" src="img/profile.svg" alt="">
                    <span class="text-white">John Doe</span>
-               </div>
-               
+                </div>
             </div>
-            
-
         </div>
+        <!-- main part a destra -->
         <div id="right-content">
             <div class="top-bar container-flex">
                 <a class="button" href="#">Effettua l'upgrade</a>
