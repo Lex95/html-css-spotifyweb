@@ -13,15 +13,18 @@
     <main>
         <!-- barra a sinistra -->
         <div id="left-bar" class="container-flex text-white">
-            <img src="img/logo.svg" alt="">
+            <a class="logo-img" href="#">
+                <img class="hidden-xs" src="img/logo.svg" alt="">
+                <img class="visible-xs" src="img/logo-small.svg" alt="">
+            </a>
             <br>
-            <a id="selected" class="align low-opacity" href="#"><img class="small-icon" src="img/home.svg" alt=""> Home</a>
-            <a class="align opacity" href="#"><img class="small-icon" src="img/search.svg" alt=""> Cerca</a>
-            <a class="align opacity" href="#"><img class="small-icon" src="img/libreria.svg" alt=""> La tua libreria</a>
+            <a id="selected" class="align low-opacity" href="#"><img class="small-icon" src="img/home.svg" alt=""><span class="hidden-xs"> Home</span></a>
+            <a class="align opacity" href="#"><img class="small-icon" src="img/search.svg" alt=""><span class="hidden-xs"> Cerca</span></a>
+            <a class="align opacity" href="#"><img class="small-icon" src="img/libreria.svg" alt=""><span class="hidden-xs"> La tua libreria</span></a>
             <br>
-            <h5>PLAYLIST</h5>
-            <a class="align opacity" href="#"><div id="add-playlist">+</div> Crea Playlist</a>
-            <ul class="no-style stretch-item">
+            <h5 class="hidden-xs">PLAYLIST</h5>
+            <a class="align opacity hidden-xs" href="#"><div id="add-playlist">+</div> Crea Playlist</a>
+            <ul class="no-style stretch-item hidden-xs">
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
@@ -31,9 +34,9 @@
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
             </ul>
             <div id="footer-bar">
-                <a class="align block opacity" href="#"><img class="xs-icon" src="img/download.svg" alt=""> Installa app</a>
+                <a class="align block opacity" href="#"><img class="xs-icon" src="img/download.svg" alt=""><span class="hidden-xs"> Installa app</span></a>
                 <div class="align text-white">
-                   <img id="propic" class="small-icon" src="img/profile.svg" alt=""> John Doe
+                   <img id="propic" class="small-icon" src="img/profile.svg" alt=""><span class="hidden-xs"> John Doe</span>
                 </div>
             </div>
         </div>
@@ -180,8 +183,10 @@
                 <a class="low-opacity" href="#">Sinister</a>
                 <a class="text-small opacity" href="#">Brano Nome</a>
             </div>
-            <i class="fa fa-heart-o clickable opacity" aria-hidden="true"></i>
-            <i class="fa fa-folder-o clickable opacity" aria-hidden="true"></i>
+            <div class="inline icons">
+                <i class="fa fa-heart-o clickable opacity" aria-hidden="true"></i>
+                <i class="fa fa-folder-o clickable opacity" aria-hidden="true"></i>
+            </div>
         </div>
         <!-- parte centrale -->
         <div  id="player">
