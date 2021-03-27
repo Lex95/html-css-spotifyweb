@@ -18,13 +18,19 @@
                 <img class="visible-xs small-icon" src="img/logo-small.svg" alt="">
             </a>
             <br>
-            <a id="selected" class="align low-opacity" href="#"><img class="small-icon" src="img/home.svg" alt=""><span class="hidden-xs"> Home</span></a>
+            <div class="relative">
+                <div class="green-line"></div>
+                <a class="align low-opacity relative" href="#">
+                    <img class="small-icon" src="img/home.svg" alt="">
+                    <span class="hidden-xs"> Home</span>
+                </a>
+            </div>
             <a class="align opacity" href="#"><img class="small-icon" src="img/search.svg" alt=""><span class="hidden-xs"> Cerca</span></a>
             <a class="align opacity" href="#"><img class="small-icon" src="img/libreria.svg" alt=""><span class="hidden-xs"> La tua libreria</span></a>
             <br>
             <h5 class="hidden-xs">PLAYLIST</h5>
             <a class="align opacity hidden-xs" href="#"><div id="add-playlist">+</div> Crea Playlist</a>
-            <ul class="no-style stretch-item hidden-xs">
+            <ul class="no-style hidden-xs">
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
                 <li><a class="opacity" href="#">Nome Playlist</a></li>
@@ -49,7 +55,10 @@
             <div class="main-section container-flex">
                 <!-- browse list in alto -->
                 <ul class="browse text-white text-upper">
-                    <li><a class="opacity" href="#">In e<span id="green-bot">vide</span>nza</a></li>
+                    <li class="relative">
+                        <a class="opacity" href="#">In evidenza</a>
+                        <div class="green-line"></div>
+                    </li>
                     <li><a class="opacity" href="#">Podcast</a></li>
                     <li><a class="opacity" href="#">Classifiche</a></li>
                     <li><a class="opacity" href="#">Generi e mood</a></li>
@@ -61,7 +70,7 @@
                     <h2>Recently Played</h2>
                     <div class="container-flex">
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/metal_lifting.jpg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -71,7 +80,7 @@
                             <p>Subtitle</p>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/stranger.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -81,7 +90,7 @@
                             <p>Kyle Dixon &Michael Stein</p>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/aquietplace.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -91,7 +100,7 @@
                             <p>Subtitle</p>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/split.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -101,7 +110,7 @@
                             <p>Subtitle</p>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/cure.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -111,7 +120,7 @@
                             <p>Subtitle</p>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/sinister.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -128,7 +137,7 @@
                     <p>Più ascolti, più saranno accurati i suggerimenti.</p>
                     <div class="container-flex">
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/radar.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -137,7 +146,7 @@
                             <h4>Release Radar</h4>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/mixdaily.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -153,7 +162,7 @@
                     <p>Più ascolti, più saranno accurati i suggerimenti.</p>
                     <div class="container-flex">
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/youg.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -162,7 +171,7 @@
                             <h4>Lana del Rey</h4>
                         </a>
                         <a class="item" href="#">
-                            <div class="img-container">
+                            <div class="relative">
                                 <img src="img/einaudi.jpeg" alt="">
                                 <div class="item-hover text-white">
                                     <i class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -202,7 +211,7 @@
             <!-- barra -->
             <div class="text-white container-flex">
                 <span class="text-small">0:25</span>
-                <div class="inline length-bar">
+                <div class="inline length-bar relative">
                     <div class="progress-bar"></div>
                     <div class="cursor-bar"></div>
                 </div>
@@ -215,7 +224,7 @@
             <i class="fa fa-television clickable low-opacity" aria-hidden="true"></i>
              <i class="fa fa-volume-up clickable low-opacity" aria-hidden="true"></i>
             <!-- barra volume -->
-            <div class="inline length-bar">
+            <div class="inline length-bar relative">
                  <div class="progress-bar"></div>
                  <div class="cursor-bar"></div>
             </div>

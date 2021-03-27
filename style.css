@@ -18,21 +18,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
     color: grey;
+    font-size: 13px;
 }
 .container-flex {
     display: flex;
-}
-.text-grey {
-    color: grey;
 }
 .text-white {
     color: white;
 }
 .text-small {
     font-size: 10px;
-}
-.text-center {
-    text-align: center;
 }
 .text-upper {
     text-transform: uppercase;
@@ -64,11 +59,20 @@ p {
 .visible-xs {
     display: none;
 }
+.relative {
+    position: relative;
+}
+.green-line {
+    background-color: greenyellow;
+    position: absolute;
+}
+
 
 /* specifici */
 main {
     height: calc(100vh - 100px);
 }
+/* barra a sinistra */
 #left-bar {
     width: 250px;
     height: 100%;
@@ -86,9 +90,12 @@ main {
 #left-bar > .logo-img > .hidden-xs {
     width: 70%;
 }
-#selected {
-    border-left: 3px solid greenyellow;
-    padding-left: 12px;
+#left-bar .green-line {
+    width: 3px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    
 }
 #add-playlist {
     display: inline-block;
@@ -102,7 +109,7 @@ main {
     font-size: 30px;
     font-weight: 1000;
 }
-.stretch-item {
+#left-bar ul {
     min-height: 100px;
     flex-grow: 1;
     overflow-y: auto;
@@ -124,6 +131,8 @@ main {
 }
 
 
+
+/* main part a destra */
 #right-content {
     width: calc(100% - 250px);
     height: 100%;
@@ -148,9 +157,10 @@ main {
 
 .main-section {
     background-color: rgb(10, 20, 20);
-    padding: 10px;
+    padding: 15px;
     flex-direction: column;
 }
+/* browse list in alto */
 .browse {
     align-self: center;
     text-align: center;
@@ -159,10 +169,12 @@ main {
     display: inline-block;
     margin: 0 10px 20px;
 }
-#green-bot {
-    border-bottom: 3px solid greenyellow;
+#right-content .green-line {
+    width: 40px;
+    height: 3px;
+    left: 30px;
 }
-/* forse è meglio un div volante absolute così non si opacizza */
+/* sezioni sotto */
 section > .container-flex {
     flex-wrap: wrap;
     margin-top: 20px;
@@ -185,9 +197,6 @@ section > p {
     text-align: center;
     margin-bottom: 20px;
 }
-.img-container {
-    position: relative;
-}
 .item img {
     width: 100%;
 }
@@ -205,9 +214,16 @@ section > p {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.item > h4 {
+    margin-top: 10px;
+}
+.item > p {
+    margin-top: 5px;
+}
 
 
 
+/* barra di riproduzione in basso */
 nav {
     height: 100px;
     width: 100%;
@@ -216,6 +232,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+/* parte a sinistra */
 #now-playing > *, #now-playing > .icons > * {
     margin-left: 10px;
 }
@@ -229,7 +246,7 @@ nav {
     font-size: 14px;
     display: block;
 }
-
+/* parte centrale */
 #player {
     flex-grow: 1;
     margin: 0 3%;
@@ -248,15 +265,11 @@ nav {
     font-size: 40px;
     margin: 0 20px;
 }
-.bar {
-    height: 4px;
-}
 .length-bar {
     height: 4px;
     background-color: grey;
     border-radius: 2px;
     cursor: pointer;
-    position: relative;
 }
 .progress-bar {
     height: 100%;
@@ -283,8 +296,7 @@ nav {
 #player .cursor-bar {
     left: 20%;
 }
-
-
+/* parte a destra */
 #options > * {
     margin: 0 5px;
 }
@@ -325,7 +337,6 @@ nav {
 }
 
 /* media query */
-/* controlla largezze per gli a-capi della browse list */
 @media screen and (max-width: 1199px) {
     .item {
         width: calc(100% / 4);
@@ -349,17 +360,35 @@ nav {
         display: block;
         margin-top: 5px;
     }
-    /* larghezza barra forse necessita di uno shrink -> rifare la aprte della barra con flex */
 }
 @media screen and (max-width: 767px) {
+    .visible-xs {
+        display: inline-block;
+    }
+    .hidden-xs {
+        display: none;
+    }
     #left-bar {
         width: 50px;
     }
     #left-bar > * {
         padding: 5px 10px;
     }
-    #selected {
-        padding-left: 7px;
+    /* non bellissimo, da rivisitare */
+    #spacing {
+        flex-grow: 1;
+    }
+    #footer-bar {
+        justify-self: flex-end;
+    }
+    #footer-bar a {
+        text-align: center;
+    }
+    #footer-bar .xs-icon {
+        margin-right: 0;
+    }
+    #footer-bar > div {
+        border-top: none;
     }
     #right-content {
         width: calc(100% - 50px);
@@ -381,27 +410,4 @@ nav {
         display: block;
         margin-top: 5px;
     }
-    .visible-xs {
-        display: inline-block;
-    }
-    .hidden-xs {
-        display: none;
-    }
-    /* non bellissimo, da rivisitare */
-    #spacing {
-        flex-grow: 1;
-    }
-    #footer-bar {
-        justify-self: flex-end;
-    }
-    #footer-bar a {
-        text-align: center;
-    }
-    #footer-bar .xs-icon {
-        margin-right: 0;
-    }
-    /* non va giù!!! */
-    #footer-bar > div {
-        border-top: none;
-    } 
 }
