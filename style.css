@@ -153,11 +153,11 @@ main {
 }
 .browse {
     align-self: center;
-    justify-self: center;
+    text-align: center;
 }
 .browse li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 10px 20px;
 }
 #green-bot {
     border-bottom: 3px solid greenyellow;
@@ -214,6 +214,7 @@ nav {
     background-color: rgb(40, 40, 40);
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #now-playing > *, #now-playing > .icons > * {
     margin-left: 10px;
@@ -228,11 +229,15 @@ nav {
     font-size: 14px;
     display: block;
 }
+
 #player {
-    width: 50%;
+    flex-grow: 1;
+    margin: 0 3%;
 }
 #player > div:first-child {
     height: 45px;
+}
+#player > .container-flex {
     justify-content: center;
     align-items: center;
 }
@@ -270,7 +275,7 @@ nav {
 }
 #player .length-bar {
     width: 70%;
-    margin: 0 20px;
+    margin: 0 3%;
 }
 #player .progress-bar {
     width: 20%;
@@ -337,6 +342,9 @@ nav {
     section:first-of-type  > .container-flex {
         justify-content: flex-start;
     }
+    #now-playing > div:first-of-type {
+        margin-right: 0;
+    }
     #now-playing > .icons > i {
         display: block;
         margin-top: 5px;
@@ -346,6 +354,12 @@ nav {
 @media screen and (max-width: 767px) {
     #left-bar {
         width: 50px;
+    }
+    #left-bar > * {
+        padding: 5px 10px;
+    }
+    #selected {
+        padding-left: 7px;
     }
     #right-content {
         width: calc(100% - 50px);
@@ -357,6 +371,12 @@ nav {
     section:first-of-type  > .container-flex {
         justify-content: flex-start;
     }
+    #now-playing > div:first-of-type {
+        margin-right: 0;
+    }
+    #now-playing > .icons {
+        margin-left: 0;
+    }
     #now-playing > .icons > i {
         display: block;
         margin-top: 5px;
@@ -367,8 +387,18 @@ nav {
     .hidden-xs {
         display: none;
     }
+    /* non bellissimo, da rivisitare */
+    #spacing {
+        flex-grow: 1;
+    }
     #footer-bar {
         justify-self: flex-end;
+    }
+    #footer-bar a {
+        text-align: center;
+    }
+    #footer-bar .xs-icon {
+        margin-right: 0;
     }
     /* non va giù!!! */
     #footer-bar > div {
