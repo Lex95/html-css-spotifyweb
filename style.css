@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -188,7 +191,6 @@ section > h2 {
 section > p {
     margin-top: 10px;
 }
-/* forse non è ancora corretto, il margine penso vada calcolato */
 .item {
     padding-right: 20px;
     display: inline-block;
@@ -230,7 +232,6 @@ nav {
     background-color: rgb(40, 40, 40);
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 /* parte a sinistra */
 #now-playing > *, #now-playing > .icons > * {
@@ -249,7 +250,6 @@ nav {
 /* parte centrale */
 #player {
     flex-grow: 1;
-    margin: 0 3%;
 }
 #player > div:first-child {
     height: 45px;
@@ -337,7 +337,7 @@ nav {
 }
 
 /* media query */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 992px) {
     .item {
         width: calc(100% / 4);
     }
@@ -374,7 +374,6 @@ nav {
     #left-bar > * {
         padding: 5px 10px;
     }
-    /* non bellissimo, da rivisitare */
     #spacing {
         flex-grow: 1;
     }
@@ -397,7 +396,7 @@ nav {
         width: calc(100% / 2);
         max-width: none;
     }
-    section:first-of-type  > .container-flex {
+    section:first-of-type > .container-flex {
         justify-content: flex-start;
     }
     #now-playing > div:first-of-type {
@@ -409,5 +408,8 @@ nav {
     #now-playing > .icons > i {
         display: block;
         margin-top: 5px;
+    }
+    #options > * {
+        margin-left: 0;
     }
 }
